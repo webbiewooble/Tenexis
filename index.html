@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenexis Medical | Precision Instruments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            50: '#f4f9fc',
+                            100: '#e1f1f7',
+                            200: '#c5e2ef',
+                            300: '#9bcee3',
+                            400: '#69b2d2',
+                            500: '#4797be',
+                            600: '#397a9f', // Primary Medical Blue
+                            700: '#306281',
+                            800: '#2a536b',
+                            900: '#264559',
+                            950: '#162c3a', // Deep slate/blue
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Smooth reveal animation for elements on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glassmorphism nav */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Minimalistic hero background pattern */
+        .hero-pattern {
+            background-color: #f4f9fc;
+            background-image: 
+                radial-gradient(at 100% 0%, rgba(105, 178, 210, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(57, 122, 159, 0.1) 0px, transparent 50%);
+        }
+
+        /* Hover image zoom effect */
+        .img-zoom-container {
+            overflow: hidden;
+        }
+        .img-zoom-container img {
+            transition: transform 0.7s ease;
+        }
+        .img-zoom-container:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Swiper custom styles */
+        .swiper-button-next, .swiper-button-prev {
+            color: #397a9f !important;
+            background: rgba(255, 255, 255, 0.9);
+            width: 48px !important;
+            height: 48px !important;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background: #ffffff;
+            color: #264559 !important;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 20px !important;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #397a9f !important;
+        }
+        .swiper-pagination-bullet {
+            background-color: #ffffff;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased flex flex-col min-h-screen selection:bg-medical-200 selection:text-medical-900">
+
+    <!-- Top Bar -->
+    <div class="bg-medical-950 text-white/80 py-2 text-[11px] font-medium tracking-wide hidden lg:block z-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span class="flex items-center hover:text-white transition-colors cursor-default">
+                    <svg class="w-3.5 h-3.5 mr-1.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    +91 40 4968 1200
+                </span>
+                <span class="flex items-center hover:text-white transition-colors cursor-pointer">
+                    <svg class="w-3.5 h-3.5 mr-1.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    info@tenexismedical.com
+                </span>
+            </div>
+            <div class="flex space-x-5">
+                <span class="flex items-center"><span class="w-1.5 h-1.5 bg-medical-400 rounded-full mr-2"></span>ISO 13485:2016</span>
+                <span class="flex items-center"><span class="w-1.5 h-1.5 bg-medical-400 rounded-full mr-2"></span>CE Marked</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 transition-all duration-300 top-0 lg:top-[32px] glass-nav" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-0 group">
+                    <div class="flex flex-col">
+                        <div class="flex items-baseline">
+                            <span class="font-display font-black text-3xl text-medical-950 tracking-tighter leading-none uppercase">Tenexis</span>
+                            <span class="w-1.5 h-1.5 bg-medical-600 rounded-full ml-1 mb-0.5"></span>
+                        </div>
+                        <span class="text-[8px] text-slate-500 font-bold tracking-widest uppercase mt-1.5">Medical Private Ltd</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#about" class="text-slate-600 hover:text-medical-700 font-semibold text-xs tracking-widest uppercase transition-colors relative group">
+                        Company
+                    </a>
+                    <a href="#products" class="text-slate-600 hover:text-medical-700 font-semibold text-xs tracking-widest uppercase transition-colors relative group">
+                        Products
+                    </a>
+                    <a href="#facilities" class="text-slate-600 hover:text-medical-700 font-semibold text-xs tracking-widest uppercase transition-colors relative group">
+                        Facilities
+                    </a>
+                    <a href="#quality" class="text-slate-600 hover:text-medical-700 font-semibold text-xs tracking-widest uppercase transition-colors relative group">
+                        Quality
+                    </a>
+                    <a href="#contact" class="bg-medical-950 text-white px-7 py-3 font-semibold text-xs tracking-widest uppercase hover:bg-medical-800 transition-all duration-300 shadow-lg shadow-medical-900/20 flex items-center gap-2 group rounded-sm">
+                        Get in Touch
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="flex items-center lg:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-900 p-2 focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-slate-100 absolute w-full left-0 top-full shadow-2xl transition-all">
+            <div class="px-6 py-8 space-y-6 flex flex-col">
+                <a href="#about" class="text-2xl font-semibold text-slate-900 hover:text-medical-600 transition-colors">Company</a>
+                <a href="#products" class="text-2xl font-semibold text-slate-900 hover:text-medical-600 transition-colors">Products</a>
+                <a href="#facilities" class="text-2xl font-semibold text-slate-900 hover:text-medical-600 transition-colors">Facilities</a>
+                <a href="#quality" class="text-2xl font-semibold text-slate-900 hover:text-medical-600 transition-colors">Quality</a>
+                <div class="pt-6 border-t border-slate-100">
+                    <a href="#contact" class="inline-flex bg-medical-600 text-white px-8 py-4 text-lg font-medium hover:bg-medical-700 transition-colors w-full justify-center rounded-sm">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative min-h-screen flex items-center pt-24 md:pt-32 overflow-hidden">
+        <!-- Full Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=2000&auto=format&fit=crop" alt="Precision Medical Instrument" class="w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-gradient-to-r from-medical-950/90 via-medical-900/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-medical-950/40 lg:hidden"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 mt-10">
+            
+            <div class="max-w-3xl reveal active">
+                <div class="inline-flex items-center mb-8">
+                    <span class="w-8 h-px bg-medical-400 mr-4"></span>
+                    <span class="text-medical-200 font-semibold tracking-widest uppercase text-xs">Excellence in Micro-Surgery</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-light text-white leading-[1.1] mb-8">
+                    Precision <br />
+                    <span class="font-bold text-white">Engineered.</span><br />
+                    <span class="text-medical-300 font-semibold italic">Clinically Proven.</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-300 mb-12 max-w-2xl font-light leading-relaxed">
+                    We manufacture state-of-the-art ophthalmic micro-surgical knives and specialized blades with sub-micron calibration, empowering surgeons worldwide to perform with absolute confidence.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="#products" class="bg-medical-600 text-white px-8 py-4 text-sm font-semibold tracking-wide hover:bg-medical-500 transition-all duration-300 shadow-xl shadow-medical-600/20 text-center flex items-center justify-center group rounded-sm">
+                        Explore Portfolio
+                        <svg class="w-4 h-4 ml-3 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                    <a href="#contact" class="bg-transparent text-white px-8 py-4 text-sm font-semibold tracking-wide border border-white/30 hover:border-white hover:bg-white/10 transition-all duration-300 text-center rounded-sm backdrop-blur-sm">
+                        Request Samples
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Floating Data Cards -->
+        <div class="absolute right-10 top-1/3 hidden lg:block z-10 reveal active" style="transition-delay: 0.2s;">
+            <div class="bg-white/10 backdrop-blur-md p-6 shadow-2xl border border-white/20 rounded-sm w-64 mb-6">
+                <div class="text-[10px] text-medical-200 font-bold uppercase tracking-widest mb-1">Tolerance</div>
+                <div class="text-white font-display font-bold text-2xl">&lt; 2&mu;m</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-md p-6 shadow-2xl border border-white/20 rounded-sm w-64 ml-12">
+                <div class="text-[10px] text-medical-200 font-bold uppercase tracking-widest mb-1">Sharpness</div>
+                <div class="text-white font-display font-bold text-2xl">Ultra-Fine</div>
+            </div>
+        </div>
+        
+        <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/50 hover:text-white transition-colors z-20">
+            <span class="text-[10px] font-bold tracking-widest uppercase mb-3">Scroll</span>
+            <div class="w-px h-12 bg-white/20 overflow-hidden relative">
+                <div class="w-full h-1/2 bg-medical-400 absolute top-0 left-0 animate-[translateY_2s_ease-in-out_infinite]" style="animation: scrollDown 2s infinite;"></div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Company Intro -->
+    <section id="about" class="py-32 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <div class="reveal">
+                    <div class="relative p-6">
+                        <div class="absolute inset-0 bg-medical-100 translate-x-4 translate-y-4 -z-10 rounded-sm"></div>
+                        <div class="w-full aspect-square border border-slate-200 bg-white overflow-hidden rounded-sm relative shadow-lg img-zoom-container">
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1200&auto=format&fit=crop" alt="Cleanroom manufacturing environment" class="w-full h-full object-cover">
+                            
+                            <!-- Overlay badge -->
+                            <div class="absolute bottom-6 right-6 bg-white p-6 shadow-xl border-l-4 border-medical-600 rounded-sm">
+                                <h3 class="text-2xl font-display font-bold text-slate-900 mb-1">ISO 13485</h3>
+                                <p class="text-slate-500 font-medium text-sm">Certified Facility</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class="inline-flex items-center mb-6">
+                        <span class="w-8 h-px bg-medical-600 mr-4"></span>
+                        <span class="text-medical-700 font-semibold tracking-widest uppercase text-xs">About Us</span>
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-display font-light text-slate-900 mb-8 leading-tight">
+                        Redefining <span class="font-bold text-medical-900">Surgical Standards.</span>
+                    </h2>
+                    <p class="text-lg text-slate-600 mb-6 font-light leading-relaxed">
+                        Tenexis Medical Private Limited, located in Hyderabad's premier life sciences hub, is dedicated to the precise engineering of surgical instruments. We empower healthcare professionals with tools that meet the highest global standards.
+                    </p>
+                    <p class="text-lg text-slate-600 mb-10 font-light leading-relaxed">
+                        We blend advanced automated metallurgy with rigorous quality control to produce instruments that offer zero-drag penetration and ultimate tactile feedback. Our focus is singular: uncompromising quality for critical procedures.
+                    </p>
+                    
+                    <a href="#quality" class="inline-flex items-center text-medical-600 font-semibold hover:text-medical-800 transition-colors group">
+                        <span class="border-b-2 border-medical-600/30 group-hover:border-medical-600 pb-1">Read our Quality Policy</span>
+                        <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-32 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 reveal">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center mb-6">
+                        <span class="w-8 h-px bg-medical-600 mr-4"></span>
+                        <span class="text-medical-700 font-semibold tracking-widest uppercase text-xs">Our Solutions</span>
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-display font-bold text-slate-900 leading-tight">
+                        Instrument Portfolio
+                    </h2>
+                </div>
+                <p class="text-slate-500 font-light mt-6 md:mt-0 md:max-w-sm text-right">
+                    Engineered for specific surgical disciplines to ensure optimal clinical outcomes and safety.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="group bg-white border border-slate-200 hover:border-medical-300 transition-all duration-300 shadow-sm hover:shadow-xl rounded-sm overflow-hidden reveal">
+                    <div class="aspect-[4/3] bg-slate-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1584982751601-97d883f510f4?q=80&w=800&auto=format&fit=crop" alt="Ophthalmic Knives" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-[10px] font-bold tracking-widest text-medical-600 uppercase mb-3">Ophthalmology</div>
+                        <h3 class="text-2xl font-display font-semibold text-slate-900 mb-4">Ophthalmic Knives</h3>
+                        <p class="text-slate-600 font-light mb-8 leading-relaxed">
+                            Clear corneal knives, MVR blades, and crescent knives featuring proprietary cross-bevel technology for delicate precision procedures.
+                        </p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-slate-900 group-hover:text-medical-600 transition-colors">
+                            View Specifications <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="group bg-white border border-slate-200 hover:border-medical-300 transition-all duration-300 shadow-sm hover:shadow-xl rounded-sm overflow-hidden reveal" style="transition-delay: 0.1s;">
+                    <div class="aspect-[4/3] bg-slate-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1516841273335-e39b37888115?q=80&w=800&auto=format&fit=crop" alt="Surgical Blades" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-[10px] font-bold tracking-widest text-medical-600 uppercase mb-3">General Surgery</div>
+                        <h3 class="text-2xl font-display font-semibold text-slate-900 mb-4">Surgical Blades</h3>
+                        <p class="text-slate-600 font-light mb-8 leading-relaxed">
+                            Premium scalpels manufactured from ultra-fine carbon or stainless steel, gamma-sterilized for clean, consistent incisions.
+                        </p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-slate-900 group-hover:text-medical-600 transition-colors">
+                            View Specifications <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="group bg-white border border-slate-200 hover:border-medical-300 transition-all duration-300 shadow-sm hover:shadow-xl rounded-sm overflow-hidden reveal" style="transition-delay: 0.2s;">
+                    <div class="aspect-[4/3] bg-slate-100 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop" alt="OEM Solutions" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="text-[10px] font-bold tracking-widest text-medical-600 uppercase mb-3">Customization</div>
+                        <h3 class="text-2xl font-display font-semibold text-slate-900 mb-4">OEM Solutions</h3>
+                        <p class="text-slate-600 font-light mb-8 leading-relaxed">
+                            Bespoke profile grinding, custom geometric blades, and sterile bulk packaging for medical device innovators worldwide.
+                        </p>
+                        <a href="#contact" class="inline-flex items-center text-sm font-semibold text-slate-900 group-hover:text-medical-600 transition-colors">
+                            Discuss Partnership <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Image Slider Section -->
+    <section id="facilities" class="py-32 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <div class="inline-flex items-center justify-center mb-6">
+                    <span class="w-8 h-px bg-medical-600 mr-4"></span>
+                    <span class="text-medical-700 font-semibold tracking-widest uppercase text-xs">Infrastructure</span>
+                    <span class="w-8 h-px bg-medical-600 ml-4"></span>
+                </div>
+                <h2 class="text-4xl lg:text-5xl font-display font-bold text-slate-900 mb-6">
+                    State-of-the-Art Facilities
+                </h2>
+                <p class="text-lg text-slate-600 font-light leading-relaxed">
+                    Take a look inside our manufacturing ecosystem where rigorous quality control and advanced automation ensure every instrument meets exact specifications.
+                </p>
+            </div>
+            
+            <div class="reveal max-w-5xl mx-auto">
+                <!-- Swiper -->
+                <div class="swiper facilitySwiper rounded-sm overflow-hidden shadow-2xl border border-slate-100">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide relative">
+                            <div class="aspect-[16/7] w-full">
+                                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover" alt="Advanced Laboratory">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-8 md:p-12">
+                                <h3 class="text-white text-2xl md:text-3xl font-bold mb-2">Advanced Testing Laboratory</h3>
+                                <p class="text-slate-200 font-light max-w-xl text-sm md:text-base">Equipped with high-resolution microscopy and laser interferometry for sub-micron validation of instrument edges.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <div class="aspect-[16/7] w-full">
+                                <img src="https://images.unsplash.com/photo-1581093806997-124204d9fa9d?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover" alt="Precision Manufacturing">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-8 md:p-12">
+                                <h3 class="text-white text-2xl md:text-3xl font-bold mb-2">Precision Automated Grinding</h3>
+                                <p class="text-slate-200 font-light max-w-xl text-sm md:text-base">Robotic CNC grinding centers ensuring unmatched consistency across thousands of production batches.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative">
+                            <div class="aspect-[16/7] w-full">
+                                <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover" alt="Cleanroom Environment">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                            <div class="absolute bottom-0 left-0 p-8 md:p-12">
+                                <h3 class="text-white text-2xl md:text-3xl font-bold mb-2">Class 10,000 Cleanrooms</h3>
+                                <p class="text-slate-200 font-light max-w-xl text-sm md:text-base">Strictly controlled environments for the final cleaning, sterilization preparation, and packaging of surgical devices.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Section -->
+    <section id="quality" class="py-32 bg-medical-950 text-white relative">
+        <div class="absolute inset-0 opacity-10">
+            <img src="https://images.unsplash.com/photo-1574169208507-84376144848b?q=80&w=1200&auto=format&fit=crop" class="w-full h-full object-cover mix-blend-screen" alt="Background Texture">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <h2 class="text-4xl lg:text-5xl font-display font-light mb-8 leading-tight">
+                        Zero <span class="font-bold">Compromise.</span>
+                    </h2>
+                    <p class="text-medical-100 font-light leading-relaxed text-lg mb-12 max-w-lg">
+                        In surgery, the margin for error is non-existent. Our manufacturing ecosystem is governed by strict international protocols, ensuring every blade meets rigorous clinical demands.
+                    </p>
+                    
+                    <div class="space-y-10 border-l border-medical-800 pl-8 ml-2">
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-medical-950 border-4 border-medical-500"></span>
+                            <h4 class="text-xl font-bold mb-2">Laser Interferometry</h4>
+                            <p class="text-medical-300 font-light text-sm leading-relaxed">High-resolution laser scanners measure blade angles. Deviations beyond 2 microns are automatically rejected.</p>
+                        </div>
+                        <div class="relative">
+                            <span class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-medical-950 border-4 border-medical-500"></span>
+                            <h4 class="text-xl font-bold mb-2">Zero-Force Testing</h4>
+                            <p class="text-medical-300 font-light text-sm leading-relaxed">Mechanical testing on silicone substrates guarantees penetration force &lt;0.4N for tear-free, clean incisions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="reveal">
+                    <div class="bg-medical-900/80 backdrop-blur-md border border-medical-800 p-12 rounded-sm shadow-2xl relative overflow-hidden">
+                        <!-- Decorative element -->
+                        <div class="absolute -right-20 -top-20 w-64 h-64 bg-medical-600/10 rounded-full blur-3xl"></div>
+                        
+                        <div class="mb-12 relative z-10">
+                            <div class="text-6xl font-display font-light text-medical-400 mb-2">99.9<span class="text-4xl">%</span></div>
+                            <div class="text-xs font-bold tracking-widest uppercase text-medical-200">Quality Pass Rate</div>
+                        </div>
+                        <div class="w-full h-px bg-medical-800 mb-12 relative z-10"></div>
+                        <div class="grid grid-cols-2 gap-8 relative z-10">
+                            <div>
+                                <div class="text-3xl font-display font-bold text-white mb-2">ISO</div>
+                                <div class="text-[10px] font-bold tracking-widest uppercase text-medical-400">13485:2016</div>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-display font-bold text-white mb-2">Class 7</div>
+                                <div class="text-[10px] font-bold tracking-widest uppercase text-medical-400">Cleanrooms</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                
+                <div class="lg:col-span-5 reveal">
+                    <div class="inline-flex items-center mb-6">
+                        <span class="w-8 h-px bg-medical-600 mr-4"></span>
+                        <span class="text-medical-700 font-semibold tracking-widest uppercase text-xs">Get In Touch</span>
+                    </div>
+                    <h2 class="text-4xl lg:text-5xl font-display font-bold text-slate-900 mb-8 leading-tight">
+                        Global Distribution & Partnerships
+                    </h2>
+                    <p class="text-slate-600 font-light mb-12 leading-relaxed">
+                        Establish distribution channels, request custom OEM pricing, or inquire about our comprehensive product catalog.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div class="mt-1 text-medical-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-2">Headquarters</h4>
+                                <p class="text-slate-900 font-medium leading-relaxed">Plot No. 42, Sector 2<br>Bio-Tech Park, Shamirpet<br>Hyderabad, Telangana 500078, India</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="mt-1 text-medical-600">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-2">Direct Contact</h4>
+                                <p class="text-slate-900 font-medium">+91 40 4968 1200</p>
+                                <a href="mailto:info@tenexismedical.com" class="text-medical-600 font-semibold hover:text-medical-800 transition-colors">info@tenexismedical.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-7 reveal" style="transition-delay: 0.2s;">
+                    <form class="bg-white p-10 md:p-14 border border-slate-200 shadow-xl rounded-sm" onsubmit="event.preventDefault(); alert('Inquiry submitted. We will contact you shortly.'); this.reset();">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                            <div>
+                                <label class="block text-[11px] font-bold tracking-widest text-slate-500 uppercase mb-3">Full Name</label>
+                                <input type="text" required class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:border-medical-600 outline-none transition-colors rounded-t-sm font-medium text-slate-900" placeholder="Dr. Jane Smith">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-bold tracking-widest text-slate-500 uppercase mb-3">Email Address</label>
+                                <input type="email" required class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:border-medical-600 outline-none transition-colors rounded-t-sm font-medium text-slate-900" placeholder="jane@hospital.com">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-8">
+                            <label class="block text-[11px] font-bold tracking-widest text-slate-500 uppercase mb-3">Inquiry Type</label>
+                            <select class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:border-medical-600 outline-none transition-colors rounded-t-sm font-medium text-slate-900 cursor-pointer">
+                                <option>Product Specifications & Pricing</option>
+                                <option>Custom OEM Manufacturing</option>
+                                <option>Global Distributorship</option>
+                                <option>Other General Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-10">
+                            <label class="block text-[11px] font-bold tracking-widest text-slate-500 uppercase mb-3">Message</label>
+                            <textarea rows="4" required class="w-full bg-slate-50 border-b-2 border-slate-200 px-4 py-3 focus:border-medical-600 outline-none transition-colors rounded-t-sm font-medium text-slate-900 resize-none" placeholder="How can we assist you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="bg-slate-900 text-white px-10 py-4 text-sm font-semibold tracking-wide hover:bg-medical-600 transition-all shadow-md hover:shadow-xl w-full sm:w-auto inline-flex items-center justify-center group rounded-sm">
+                            Submit Inquiry
+                            <svg class="w-4 h-4 ml-3 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-white pt-24 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+                <div class="md:col-span-5">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-10 h-10 bg-medical-600 flex items-center justify-center text-white rounded-sm">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <span class="font-display font-semibold text-xl tracking-tight leading-none">Tenexis</span>
+                            <span class="text-[9px] text-slate-400 tracking-[0.2em] uppercase mt-1">Medical</span>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 font-light text-sm max-w-sm leading-relaxed">
+                        Engineering precision surgical instruments. ISO 13485:2016 Certified and CDSCO Approved facility in India, delivering excellence worldwide.
+                    </p>
+                </div>
+                
+                <div class="md:col-span-3">
+                    <h4 class="text-[10px] font-bold tracking-widest text-slate-500 uppercase mb-6">Navigation</h4>
+                    <ul class="space-y-4 text-sm text-slate-300 font-light">
+                        <li><a href="#about" class="hover:text-medical-400 transition-colors">Company</a></li>
+                        <li><a href="#products" class="hover:text-medical-400 transition-colors">Products & Solutions</a></li>
+                        <li><a href="#facilities" class="hover:text-medical-400 transition-colors">Facilities</a></li>
+                        <li><a href="#quality" class="hover:text-medical-400 transition-colors">Quality Assurance</a></li>
+                        <li><a href="#contact" class="hover:text-medical-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="md:col-span-4">
+                    <h4 class="text-[10px] font-bold tracking-widest text-slate-500 uppercase mb-6">Compliance</h4>
+                    <ul class="space-y-4 text-sm text-slate-300 font-light">
+                        <li>CIN: U32503TG2023PTC176421</li>
+                        <li>ISO 13485:2016 Compliant</li>
+                        <li>Class 10,000 Cleanroom Certified</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 font-light">
+                <p>&copy; 2026 Tenexis Medical Private Limited. All Rights Reserved.</p>
+                <p class="mt-4 md:mt-0">Precision. Integrity. Excellence.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <!-- Interactive Scripts -->
+    <script>
+        // Initialize Swiper
+        const swiper = new Swiper('.facilitySwiper', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        });
+
+        // Navbar on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('lg:top-[32px]');
+                navbar.classList.add('top-0');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('lg:top-[32px]');
+                navbar.classList.remove('top-0');
+            }
+        });
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Scroll Reveal Animation
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        };
+        
+        const revealOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        
+        const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+        
+        revealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+        
+        // Trigger initial check
+        setTimeout(() => {
+            revealElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    el.classList.add('active');
+                }
+            });
+        }, 100);
+    </script>
+</body>
+</html>

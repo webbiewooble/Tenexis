@@ -1,0 +1,6 @@
+{
+  "name": "Tenexis Medical",
+  "description": "A minimalist, high-end landing page for Tenexis Medical Private Limited, showcasing precision surgical and ophthalmic devices with smooth animations and interactive product exploration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

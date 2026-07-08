@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="100%" height="100%">
+  <!-- T -->
+  <text x="70" y="150" font-family="'Times New Roman', Times, serif" font-size="160" fill="#1a1a1a">T</text>
+  <!-- E -->
+  <text x="180" y="150" font-family="'Times New Roman', Times, serif" font-size="160" fill="#1a1a1a">E</text>
+  <!-- N -->
+  <text x="290" y="150" font-family="'Times New Roman', Times, serif" font-size="160" fill="#1a1a1a">N</text>
+  <!-- E -->
+  <text x="410" y="150" font-family="'Times New Roman', Times, serif" font-size="160" fill="#1a1a1a">E</text>
+  <!-- X -->
+  <text x="520" y="150" font-family="'Times New Roman', Times, serif" font-size="160" fill="#1a1a1a">X</text>
+  <!-- I (Crutch) -->
+  <g transform="translate(640, 20)">
+    <!-- Arm pad -->
+    <rect x="-15" y="0" width="30" height="15" fill="#009688" />
+    <!-- Crutch body -->
+    <path d="M-10,30 L-10,80 L-4,100 L-4,160 L4,160 L4,100 L10,80 L10,30 Z" fill="#1a1a1a" />
+    <path d="M-4,160 L-2,190 L2,190 L4,160 Z" fill="#1a1a1a" />
+    <!-- Handle -->
+    <rect x="-12" y="70" width="24" height="8" fill="#1a1a1a" />
+    <!-- Tip -->
+    <rect x="-4" y="190" width="8" height="15" fill="#333333" rx="3" />
+  </g>
+  <!-- S -->
+  <text x="670" y="150" font-family="'Times New Roman', Times, serif" font-size="160" fill="#1a1a1a">S</text>
+
+  <!-- Oval with cross -->
+  <g transform="translate(340, 180)">
+    <!-- Ellipse outline -->
+    <ellipse cx="0" cy="-10" rx="120" ry="45" fill="none" stroke="#009688" stroke-width="8" />
+    <!-- Cross -->
+    <path d="M-70,-30 L-30,-30 L-30,-70 L10,-70 L10,-30 L50,-30 L50,10 L10,10 L10,50 L-30,50 L-30,10 L-70,10 Z" fill="#009688" transform="scale(0.6) translate(-70, 0)" />
+    <!-- Sparkles -->
+    <!-- Center Sparkle -->
+    <path d="M0,-10 Q5,0 10,0 Q5,0 5,10 Q5,0 0,0 Q5,0 5,-10 Z" fill="#009688" transform="translate(20, -20) scale(1.5)" />
+    <!-- Left Sparkle -->
+    <path d="M0,-10 Q5,0 10,0 Q5,0 5,10 Q5,0 0,0 Q5,0 5,-10 Z" fill="#009688" transform="translate(-10, -5)" />
+    <!-- Right Sparkle -->
+    <path d="M0,-10 Q5,0 10,0 Q5,0 5,10 Q5,0 0,0 Q5,0 5,-10 Z" fill="#009688" transform="translate(45, 5)" />
+  </g>
+  
+  <!-- "medical" -->
+  <text x="470" y="240" font-family="'Courier New', Courier, monospace" font-size="48" fill="#1a1a1a" letter-spacing="10">medical</text>
+  <!-- Lines next to medical -->
+  <line x1="430" y1="225" x2="460" y2="225" stroke="#999" stroke-width="1" />
+  <line x1="740" y1="225" x2="770" y2="225" stroke="#999" stroke-width="1" />
+
+  <!-- "INNOVATE CARE EXCEL" -->
+  <text x="450" y="275" font-family="'Courier New', Courier, monospace" font-size="16" fill="#1a1a1a" letter-spacing="4">INNOVATE <tspan fill="#009688">•</tspan> CARE <tspan fill="#009688">•</tspan> EXCEL</text>
+</svg>

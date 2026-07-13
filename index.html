@@ -129,7 +129,7 @@
     <section class="relative h-[85vh] flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0 bg-slate-900">
             <!-- Globe / Network abstract background -->
-            <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=2000&auto=format&fit=crop" alt="Medicine" class="w-full h-full object-cover object-center opacity-60" />
+            <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?q=80&w=2000&auto=format&fit=crop" alt="Surgical Implants and Instruments" class="w-full h-full object-cover object-center opacity-60" />
             <div class="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-slate-900/60 to-slate-900/40"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
         </div>
@@ -300,24 +300,39 @@
                     <div class="w-full aspect-[4/5] relative overflow-hidden bg-slate-100 mb-4 rounded-sm">
                         <img id="director-image-1" src="./assets/abdul_ahad_khan.jpeg" alt="Dr. Abdul Ahad Khan" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
-                    <h3 class="text-base lg:text-lg font-display font-bold text-slate-900 mb-1">Dr. Abdul Ahad Khan <span class="text-xs text-slate-500 font-normal">(BPT)</span></h3>
-                    <p class="text-[11px] lg:text-xs text-slate-500 font-medium mb-3">Rehabilitation Expert</p>
-                    <div class="text-[13px] text-slate-600 font-light leading-relaxed space-y-3 pt-3">
-                        <p>Possesses a strong academic background as a physiotherapist and runs a highly successful chain of modern Rehabilitation centers.</p>
-                        <p>Manages athletic conditioning and recovery, working closely with world-class competitive athletes. His holistic insight ensures our products are engineered for faster recovery timelines.</p>
+                    <h3 class="text-base lg:text-lg font-display font-bold text-slate-900 mb-1">Dr. Abdul Ahad Khan <span class="text-xs text-slate-500 font-normal">(PT)</span></h3>
+                    <p class="text-[11px] lg:text-xs text-slate-500 font-medium mb-3 leading-snug">Rehabilitation Expert | Sports Physiotherapist | Product Specialist - Arthroscopy & Trauma</p>
+                    <div class="text-[13px] text-slate-600 font-light leading-relaxed pt-3">
+                        <div id="abdul-desc-short" class="space-y-3">
+                            <p>Dr. Abdul Ahad Khan is a physiotherapist and rehabilitation expert with extensive experience in post-operative recovery, sports rehabilitation, and musculoskeletal care...</p>
+                            <button onclick="document.getElementById('abdul-desc-short').classList.add('hidden'); document.getElementById('abdul-desc-full').classList.remove('hidden');" class="text-medical-600 font-semibold hover:text-medical-700 transition-colors text-xs uppercase tracking-wider mt-1 text-left">Read More</button>
+                        </div>
+                        <div id="abdul-desc-full" class="hidden space-y-3">
+                            <p>Dr. Abdul Ahad Khan is a physiotherapist and rehabilitation expert with extensive experience in post-operative recovery, sports rehabilitation, and musculoskeletal care. He is the Founder & Director of RehAAB Physiotherapy & Wellness Centre, where he leads evidence-based rehabilitation programs focused on restoring function, enhancing performance, and improving quality of life.</p>
+                            <p>He works closely with competitive athletes and orthopaedic patients, specializing in post-surgical rehabilitation, return-to-sport programs, and athletic conditioning. His clinical expertise is complemented by his role as a Product Specialist in Arthroscopy & Trauma Implants, where he contributes to surgeon education, surgical technique development, distributor training, and cadaveric workshops. This unique combination of clinical and industry experience enables him to bridge the gap between advanced orthopaedic surgery and effective rehabilitation.</p>
+                            <button onclick="document.getElementById('abdul-desc-full').classList.add('hidden'); document.getElementById('abdul-desc-short').classList.remove('hidden');" class="text-medical-600 font-semibold hover:text-medical-700 transition-colors text-xs uppercase tracking-wider mt-1 text-left">Show Less</button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Director 2 -->
                 <div class="flex flex-col group" id="director-taha">
                     <div class="w-full aspect-[4/5] relative overflow-hidden bg-slate-100 mb-4 rounded-sm">
-                        <img id="director-image-3" src="./assets/taha_malik.png" alt="Mohammed Taha Malik" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <img id="director-image-3" src="./assets/taha_malik_new.jpeg" alt="Mohammed Taha Malik" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                     </div>
                     <h3 class="text-base lg:text-lg font-display font-bold text-slate-900 mb-1">Mohammed Taha Malik</h3>
-                    <p class="text-[11px] lg:text-xs text-slate-500 font-medium mb-3">Global Clinical Specialist</p>
-                    <div class="text-[13px] text-slate-600 font-light leading-relaxed space-y-3 pt-3">
-                        <p>Over 10 years of intensive, global experience within the orthopedic sector representing tier-one international biomedical brands like Medtronic and Arthrex.</p>
-                        <p>Technical and clinical mastery over Arthroplasty and Arthroscopy. His deep understanding of surgical dynamics drives Tenexis' operational excellence.</p>
+                    <p class="text-[11px] lg:text-xs text-slate-500 font-medium mb-3 leading-snug">International Sales & Marketing | Market Strategy | Medical Devices</p>
+                    <div class="text-[13px] text-slate-600 font-light leading-relaxed pt-3">
+                        <div id="taha-desc-short" class="space-y-3">
+                            <p>Healthcare professional with close to 10 years of progressive experience in sales, marketing, business development, and strategy within the medical devices sector...</p>
+                            <button onclick="document.getElementById('taha-desc-short').classList.add('hidden'); document.getElementById('taha-desc-full').classList.remove('hidden');" class="text-medical-600 font-semibold hover:text-medical-700 transition-colors text-xs uppercase tracking-wider mt-1 text-left">Read More</button>
+                        </div>
+                        <div id="taha-desc-full" class="hidden space-y-3">
+                            <p>Healthcare professional with close to 10 years of progressive experience in sales, marketing, business development, and strategy within the medical devices sector, specializing in arthroscopy, trauma, biologics, and capital equipment.</p>
+                            <p>Currently serving as International Sales and Marketing Manager, he has a proven track record of driving revenue growth, building global channel networks, and leading cross-functional initiatives across 50+ countries.</p>
+                            <p>His background includes extensive experience representing tier-one biomedical brands like Medtronic, Arthrex, and ConMed. He collaborates with key opinion leaders to develop targeted marketing campaigns, supports regulatory processes, and brings a strong combination of commercial acumen, strategic vision, and hands-on execution.</p>
+                            <button onclick="document.getElementById('taha-desc-full').classList.add('hidden'); document.getElementById('taha-desc-short').classList.remove('hidden');" class="text-medical-600 font-semibold hover:text-medical-700 transition-colors text-xs uppercase tracking-wider mt-1 text-left">Show Less</button>
+                        </div>
                     </div>
                 </div>
 
@@ -328,9 +343,17 @@
                     </div>
                     <h3 class="text-base lg:text-lg font-display font-bold text-slate-900 mb-1">Sidra Khan</h3>
                     <p class="text-[11px] lg:text-xs text-slate-500 font-medium mb-3">Financial Operations & Strategy</p>
-                    <div class="text-[13px] text-slate-600 font-light leading-relaxed space-y-3 pt-3">
-                        <p>CA Finalist with progressive experience in audit, financial reporting, and project management across Healthcare, Wellness, and Real Estate sectors.</p>
-                        <p>With an extensive background at EY Global Delivery Services, she combines deep technical expertise with effective leadership to drive organizational success and sustainable growth.</p>
+                    <div class="text-[13px] text-slate-600 font-light leading-relaxed pt-3">
+                        <div id="sidra-desc-short" class="space-y-3">
+                            <p>Sidra Khan is a CA Finalist with nearly three years of progressive experience in audit, financial reporting, and project management...</p>
+                            <button onclick="document.getElementById('sidra-desc-short').classList.add('hidden'); document.getElementById('sidra-desc-full').classList.remove('hidden');" class="text-medical-600 font-semibold hover:text-medical-700 transition-colors text-xs uppercase tracking-wider mt-1 text-left">Read More</button>
+                        </div>
+                        <div id="sidra-desc-full" class="hidden space-y-3">
+                            <p>Sidra Khan is a CA Finalist with nearly three years of progressive experience in audit, financial reporting, and project management. Her professional journey has been marked by continuous growth, beginning as an Article Assistant and advancing through multiple roles at EY Global Delivery Services to her current position as Assistant Manager. This career progression reflects her consistent performance, dedication, and the confidence placed in her by the organization.</p>
+                            <p>Throughout her career, Sidra has worked across diverse industries, including Healthcare, Wellness, and Real Estate, managing audit engagements covering key financial areas such as revenue, cash and bank, payroll, expenses, and trade payables. She has developed a strong reputation for combining technical expertise with effective leadership, enabling her to deliver high-quality outcomes while fostering collaboration within teams.</p>
+                            <p>Her commitment to excellence has been recognized through multiple EY SPOT Awards, highlighting not only her outstanding individual performance but also her ability to consistently deliver value to clients and contribute to organizational success.</p>
+                            <button onclick="document.getElementById('sidra-desc-full').classList.add('hidden'); document.getElementById('sidra-desc-short').classList.remove('hidden');" class="text-medical-600 font-semibold hover:text-medical-700 transition-colors text-xs uppercase tracking-wider mt-1 text-left">Show Less</button>
+                        </div>
                     </div>
                 </div>
 

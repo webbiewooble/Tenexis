@@ -4,133 +4,133 @@ const products = [
   { 
     name: "Activmotion S – Medial Opening Wedge HTO Plate (Size 1)", 
     desc: "Slim pre-contoured titanium orthopedic bone plate, designed for medial opening wedge high tibial osteotomy with multiple locking screw holes.",
-    image: "./hto_plate_green_1785489593072.webp",
+    image: "./images/hto_plate_green_1785489593072.jpg",
     category: "Tibial Opening Plates"
   },
   { 
     name: "Activmotion S – Medial Opening Wedge HTO Plate (Size 2)", 
     desc: "Larger version of the titanium high tibial osteotomy plate featuring multiple locking screw holes and low-profile anatomical contour.",
-    image: "./hto_plate_blue_1785489610900.webp",
+    image: "./images/hto_plate_blue_1785489610900.jpg",
     category: "Tibial Opening Plates"
   },
   { 
     name: "Activmotion S – HTO Plate with ACL Reconstruction", 
     desc: "Titanium HTO plate with additional fixation holes designed to accommodate ACL ligament reconstruction tunnels.",
-    image: "./acl_suture_button_plate_1785489887933.webp",
+    image: "./images/acl_suture_button_plate_1785489887933.jpg",
     category: "ACL Combined Fixation"
   },
   { 
     name: "Activmotion S – HTO Plate with ACL Reconstruction & Suture Button", 
     desc: "Advanced titanium HTO plate incorporating dedicated button fixation holes for ligament reconstruction systems.",
-    image: "./acl_suture_button_plate_1785489887933.webp",
+    image: "./images/acl_suture_button_plate_1785489887933.jpg",
     category: "ACL Combined Fixation"
   },
   { 
     name: "Lateral Closing Wedge HTO Plate (Size 1)", 
     desc: "Compact anatomical titanium bone plate for lateral closing wedge high tibial osteotomy with locking screw technology.",
-    image: "./closing_wedge_plate_1785489945765.webp",
+    image: "./images/closing_wedge_plate_1785489945765.jpg",
     category: "Tibial Closing Plates"
   },
   { 
     name: "Lateral Closing Wedge HTO Plate (Size 2)", 
     desc: "Larger titanium osteotomy plate featuring anatomical curvature and multiple threaded locking holes.",
-    image: "./closing_wedge_plate_1785489945765.webp",
+    image: "./images/closing_wedge_plate_1785489945765.jpg",
     category: "Tibial Closing Plates"
   },
   { 
     name: "Medial Closing Wedge HTO Plate (Size 1)", 
     desc: "Orthopedic titanium fixation plate designed for medial closing wedge tibial osteotomy with locking screw holes.",
-    image: "./hto_plate_green_1785489593072.webp",
+    image: "./images/hto_plate_green_1785489593072.jpg",
     category: "Tibial Closing Plates"
   },
   { 
     name: "Medial Closing Wedge HTO Plate (Size 2)", 
     desc: "Large titanium orthopedic plate with anatomical contour and locking technology for corrective tibial surgery.",
-    image: "./hto_plate_blue_1785489610900.webp",
+    image: "./images/hto_plate_blue_1785489610900.jpg",
     category: "Tibial Closing Plates"
   },
   { 
     name: "Lateral Opening Distal Femoral Osteotomy (DFO) Plate", 
     desc: "Anatomically contoured distal femur titanium plate for lateral opening wedge distal femoral osteotomy with multiple locking holes.",
-    image: "./femoral_osteotomy_plate_1785489865676.webp",
+    image: "./images/femoral_osteotomy_plate_1785489865676.jpg",
     category: "Femoral Osteotomy"
   },
   { 
     name: "Medial Closing Distal Femoral Osteotomy (DFO) Plate", 
     desc: "Titanium distal femoral osteotomy plate engineered for medial closing wedge procedures with locking screws.",
-    image: "./femoral_osteotomy_plate_1785489865676.webp",
+    image: "./images/femoral_osteotomy_plate_1785489865676.jpg",
     category: "Femoral Osteotomy"
   },
   { 
     name: "Lateral Closing Distal Femoral Osteotomy (DFO) Plate", 
     desc: "Anatomical distal femoral fixation plate featuring low-profile titanium construction and multiple screw holes.",
-    image: "./femoral_osteotomy_plate_1785489865676.webp",
+    image: "./images/femoral_osteotomy_plate_1785489865676.jpg",
     category: "Femoral Osteotomy"
   },
   { 
     name: "Deflexion Osteotomy Plate – Size 1", 
     desc: "Titanium bone plate designed for stable osteotomy fixation with precise deflexion control.",
-    image: "./deflexion_osteotomy_plate_1785489964066.webp",
+    image: "./images/deflexion_osteotomy_plate_1785489964066.jpg",
     category: "Deflexion Plates"
   },
   { 
     name: "Deflexion Osteotomy Plate – Size 2", 
     desc: "Larger titanium bone plate designed for stable osteotomy fixation with precise deflexion control.",
-    image: "./deflexion_osteotomy_plate_1785489964066.webp",
+    image: "./images/deflexion_osteotomy_plate_1785489964066.jpg",
     category: "Deflexion Plates"
   },
   { 
     name: "Distal Femoral Derotation Plate – Medial", 
     desc: "Anatomically curved titanium distal femoral plate developed for medial derotation osteotomy and secure bone fixation.",
-    image: "./derotation_femoral_plate_1785489974764.webp",
+    image: "./images/derotation_femoral_plate_1785489974764.jpg",
     category: "Derotation Plates"
   },
   { 
     name: "Distal Femoral Derotation Plate – Lateral", 
     desc: "Distal femoral orthopedic titanium plate designed for lateral derotation osteotomy and stable fixation.",
-    image: "./derotation_femoral_plate_1785489974764.webp",
+    image: "./images/derotation_femoral_plate_1785489974764.jpg",
     category: "Derotation Plates"
   },
   { 
     name: "Oneclip® Locking Screw System", 
     desc: "Innovative locking screw system providing stability and optimal compression for various osteotomy procedures.",
-    image: "./locking_screws_macro_1785489899947.webp",
+    image: "./images/locking_screws_macro_1785489899947.jpg",
     category: "Locking Screws"
   },
   { 
     name: "DTS® Polyaxial Locking System", 
     desc: "Advanced polyaxial locking technology allowing customized screw angles for secure and stable bone fixation.",
-    image: "./locking_screws_macro_1785489899947.webp",
+    image: "./images/locking_screws_macro_1785489899947.jpg",
     category: "Locking Screws"
   },
   { 
     name: "Compression Ramp Oblong Hole System", 
     desc: "Specialized oblong hole design enabling precise compression across the osteotomy site for improved healing.",
-    image: "./closing_wedge_plate_1785489945765.webp",
+    image: "./images/closing_wedge_plate_1785489945765.jpg",
     category: "Technical Features"
   },
   { 
     name: "Osteotomy Instrument Set", 
     desc: "Comprehensive set of high-precision surgical instruments tailored for efficient and accurate osteotomy procedures.",
-    image: "./osteotomy_instruments_1785489913063.webp",
+    image: "./images/osteotomy_instruments_1785489913063.jpg",
     category: "Instrumentation"
   },
   { 
     name: "Care+ Vascular Protection Retractor", 
     desc: "Specifically designed retractor to ensure maximum protection of vascular structures during complex osteotomies.",
-    image: "./care_plus_retractor_1785489923515.webp",
+    image: "./images/care_plus_retractor_1785489923515.jpg",
     category: "Vascular Protection"
   },
   { 
     name: "Initial K Hinge Screw System", 
     desc: "Reliable hinge screw system providing stable fixation and controlled correction in opening wedge osteotomies.",
-    image: "./initial_k_hinge_screw_1785489934044.webp",
+    image: "./images/initial_k_hinge_screw_1785489934044.jpg",
     category: "Hinge Fixation"
   },
   { 
     name: "Activmotion S Osteotomy Plate System", 
     desc: "Complete and versatile osteotomy plate system featuring anatomical designs and advanced locking technology.",
-    image: "./osteotomy_plates_1785489624204.webp",
+    image: "./images/osteotomy_plates_1785489624204.jpg",
     category: "Complete System"
   }
 ];

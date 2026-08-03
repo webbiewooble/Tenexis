@@ -59,7 +59,7 @@
     <!-- Top Bar -->
     <div class="bg-slate-900 text-slate-300 py-2 text-[11px] font-medium tracking-wider hidden lg:block z-50 relative border-b border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <div class="flex space-x-8">
+            <div class="flex space-x-4 xl:space-x-8">
                 <a href="tel:+914023456789" class="flex items-center hover:text-white transition-colors">
                     <svg class="w-3.5 h-3.5 mr-2 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                     +91 40 2345 6789
@@ -88,16 +88,16 @@
                 </a>
 
                 <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-4 xl:space-x-8">
                     <a href="index.html" class="text-slate-500 font-bold text-xs tracking-widest uppercase transition-colors">Home</a>
-                    <a href="index.html#about" class="text-slate-500 hover:text-medical-600 font-semibold text-xs tracking-widest uppercase transition-colors">About Us</a>
-                    <a href="index.html#governance" class="text-slate-500 hover:text-medical-600 font-semibold text-xs tracking-widest uppercase transition-colors">Governance</a>
-                    <a href="#" class="text-slate-900 font-bold text-xs tracking-widest uppercase transition-colors">Products</a>
-                    <a href="index.html#quality" class="text-slate-500 hover:text-medical-600 font-semibold text-xs tracking-widest uppercase transition-colors">Quality</a>
-                    <a href="index.html#facilities" class="text-slate-500 hover:text-medical-600 font-semibold text-xs tracking-widest uppercase transition-colors">Facilities</a>
-                    <a href="index.html#blogs" class="text-slate-500 hover:text-medical-600 font-semibold text-xs tracking-widest uppercase transition-colors">Blogs</a>
-                    <a href="index.html#contact" class="px-6 py-2.5 rounded-full bg-medical-900 text-white font-bold text-xs tracking-widest uppercase hover:bg-medical-800 transition-colors shadow-sm">
-                        Contact Us
+                    <a href="index.html#about" class="text-slate-500 hover:text-medical-600 font-semibold text-xs tracking-widest uppercase transition-colors whitespace-nowrap">About Us</a>
+                    <a href="index.html#governance" class="text-slate-500 hover:text-medical-600 font-semibold text-xs tracking-widest uppercase transition-colors whitespace-nowrap">Governance</a>
+                    <a href="#" class="text-slate-900 font-bold text-xs tracking-widest uppercase transition-colors whitespace-nowrap">Products</a>
+                    <a href="index.html#quality" class="text-slate-500 hover:text-medical-600 font-semibold text-xs tracking-widest uppercase transition-colors whitespace-nowrap">Quality</a>
+                    <a href="index.html#facilities" class="text-slate-500 hover:text-medical-600 font-semibold text-xs tracking-widest uppercase transition-colors whitespace-nowrap">Facilities</a>
+                    <a href="index.html#blogs" class="text-slate-500 hover:text-medical-600 font-semibold text-xs tracking-widest uppercase transition-colors whitespace-nowrap">Blogs</a>
+                    <a href="booking.html" class="px-6 py-2.5 rounded-full bg-medical-900 text-white font-bold text-xs tracking-widest uppercase hover:bg-medical-800 transition-colors shadow-sm whitespace-nowrap text-center flex-shrink-0">
+                        Book Your Appointment
                     </a>
                 </div>
 
@@ -122,7 +122,7 @@
                 <a href="index.html#quality" class="text-sm font-semibold text-slate-600 uppercase tracking-widest">Quality</a>
                 <a href="index.html#facilities" class="text-sm font-semibold text-slate-600 uppercase tracking-widest">Facilities</a>
                 <a href="index.html#blogs" class="text-sm font-semibold text-slate-600 uppercase tracking-widest">Blogs</a>
-                <a href="index.html#contact" class="text-sm font-bold text-medical-600 uppercase tracking-widest pt-4 border-t border-slate-100">Contact Us</a>
+                <a href="booking.html" class="text-sm font-bold text-medical-600 uppercase tracking-widest pt-4 border-t border-slate-100">Book Your Appointment</a>
             </div>
         </div>
     </nav>
@@ -155,6 +155,14 @@
                         <h3 class="text-xl lg:text-2xl font-display font-bold text-slate-900 mb-4 leading-snug group-hover:text-medical-700 transition-colors duration-300">Deflexion Osteotomy Plate – Size 1</h3>
                         
                         <p class="text-base text-slate-600 font-light leading-relaxed mb-8 flex-grow">Anatomically contoured plate designed for secure fixation and optimal stability in osteotomy procedures.</p>
+                        <div class="flex flex-col space-y-3 mb-6 relative z-10">
+                            <div class="flex space-x-3">
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(BATGMD1D-ST)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Left</button>
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(BATDMD1D-ST)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Right</button>
+                            </div>
+                            <div class="text-sm font-bold text-medical-600 bg-medical-50 border border-medical-100 rounded-lg p-3 text-center transition-all" style="display: none;"></div>
+                        </div>
+                        
                         
                         <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-6 group-hover:border-medical-100 transition-colors duration-300">
                             <div class="flex items-center space-x-2 text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
@@ -181,6 +189,14 @@
                         <h3 class="text-xl lg:text-2xl font-display font-bold text-slate-900 mb-4 leading-snug group-hover:text-medical-700 transition-colors duration-300">Deflexion Osteotomy Plate – Size 2</h3>
                         
                         <p class="text-base text-slate-600 font-light leading-relaxed mb-8 flex-grow">Anatomically contoured plate designed for secure fixation and optimal stability in osteotomy procedures.</p>
+                        <div class="flex flex-col space-y-3 mb-6 relative z-10">
+                            <div class="flex space-x-3">
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(BATGMD2D-ST)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Left</button>
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(BATDMD2D-ST)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Right</button>
+                            </div>
+                            <div class="text-sm font-bold text-medical-600 bg-medical-50 border border-medical-100 rounded-lg p-3 text-center transition-all" style="display: none;"></div>
+                        </div>
+                        
                         
                         <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-6 group-hover:border-medical-100 transition-colors duration-300">
                             <div class="flex items-center space-x-2 text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
@@ -207,6 +223,14 @@
                         <h3 class="text-xl lg:text-2xl font-display font-bold text-slate-900 mb-4 leading-snug group-hover:text-medical-700 transition-colors duration-300">Distal Femoral Derotation Plate – Medial</h3>
                         
                         <p class="text-base text-slate-600 font-light leading-relaxed mb-8 flex-grow">Premium implant and surgical solution optimized for maximum patient outcomes and precise surgical correction.</p>
+                        <div class="flex flex-col space-y-3 mb-6 relative z-10">
+                            <div class="flex space-x-3">
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(JCTGM1D-ST)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Left</button>
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(JCTDM1D-ST)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Right</button>
+                            </div>
+                            <div class="text-sm font-bold text-medical-600 bg-medical-50 border border-medical-100 rounded-lg p-3 text-center transition-all" style="display: none;"></div>
+                        </div>
+                        
                         
                         <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-6 group-hover:border-medical-100 transition-colors duration-300">
                             <div class="flex items-center space-x-2 text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
@@ -233,6 +257,14 @@
                         <h3 class="text-xl lg:text-2xl font-display font-bold text-slate-900 mb-4 leading-snug group-hover:text-medical-700 transition-colors duration-300">Distal Femoral Derotation Plate – Lateral</h3>
                         
                         <p class="text-base text-slate-600 font-light leading-relaxed mb-8 flex-grow">Premium implant and surgical solution optimized for maximum patient outcomes and precise surgical correction.</p>
+                        <div class="flex flex-col space-y-3 mb-6 relative z-10">
+                            <div class="flex space-x-3">
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(JCTGL1D-ST)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Left</button>
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(JCTDL1D-ST)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Right</button>
+                            </div>
+                            <div class="text-sm font-bold text-medical-600 bg-medical-50 border border-medical-100 rounded-lg p-3 text-center transition-all" style="display: none;"></div>
+                        </div>
+                        
                         
                         <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-6 group-hover:border-medical-100 transition-colors duration-300">
                             <div class="flex items-center space-x-2 text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
@@ -259,6 +291,14 @@
                         <h3 class="text-xl lg:text-2xl font-display font-bold text-slate-900 mb-4 leading-snug group-hover:text-medical-700 transition-colors duration-300">Oneclip®️ Locking Screw System</h3>
                         
                         <p class="text-base text-slate-600 font-light leading-relaxed mb-8 flex-grow">Advanced locking technology ensuring optimal stability, controlled compression, and secure fixation.</p>
+                        <div class="flex flex-col space-y-3 mb-6 relative z-10">
+                            <div class="flex space-x-3">
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Left</button>
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Right</button>
+                            </div>
+                            <div class="text-sm font-bold text-medical-600 bg-medical-50 border border-medical-100 rounded-lg p-3 text-center transition-all" style="display: none;"></div>
+                        </div>
+                        
                         
                         <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-6 group-hover:border-medical-100 transition-colors duration-300">
                             <div class="flex items-center space-x-2 text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
@@ -285,6 +325,14 @@
                         <h3 class="text-xl lg:text-2xl font-display font-bold text-slate-900 mb-4 leading-snug group-hover:text-medical-700 transition-colors duration-300">DTS®️ Polyaxial Locking System</h3>
                         
                         <p class="text-base text-slate-600 font-light leading-relaxed mb-8 flex-grow">Premium implant and surgical solution optimized for maximum patient outcomes and precise surgical correction.</p>
+                        <div class="flex flex-col space-y-3 mb-6 relative z-10">
+                            <div class="flex space-x-3">
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Left</button>
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Right</button>
+                            </div>
+                            <div class="text-sm font-bold text-medical-600 bg-medical-50 border border-medical-100 rounded-lg p-3 text-center transition-all" style="display: none;"></div>
+                        </div>
+                        
                         
                         <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-6 group-hover:border-medical-100 transition-colors duration-300">
                             <div class="flex items-center space-x-2 text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
@@ -311,6 +359,14 @@
                         <h3 class="text-xl lg:text-2xl font-display font-bold text-slate-900 mb-4 leading-snug group-hover:text-medical-700 transition-colors duration-300">Compression Ramp Oblong Hole System</h3>
                         
                         <p class="text-base text-slate-600 font-light leading-relaxed mb-8 flex-grow">Advanced locking technology ensuring optimal stability, controlled compression, and secure fixation.</p>
+                        <div class="flex flex-col space-y-3 mb-6 relative z-10">
+                            <div class="flex space-x-3">
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Left</button>
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Right</button>
+                            </div>
+                            <div class="text-sm font-bold text-medical-600 bg-medical-50 border border-medical-100 rounded-lg p-3 text-center transition-all" style="display: none;"></div>
+                        </div>
+                        
                         
                         <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-6 group-hover:border-medical-100 transition-colors duration-300">
                             <div class="flex items-center space-x-2 text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
@@ -337,6 +393,14 @@
                         <h3 class="text-xl lg:text-2xl font-display font-bold text-slate-900 mb-4 leading-snug group-hover:text-medical-700 transition-colors duration-300">Osteotomy Instrument Set</h3>
                         
                         <p class="text-base text-slate-600 font-light leading-relaxed mb-8 flex-grow">Dedicated instruments to prepare, create and maintain the appropriate angular correction during osteosynthesis.</p>
+                        <div class="flex flex-col space-y-3 mb-6 relative z-10">
+                            <div class="flex space-x-3">
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Left</button>
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Right</button>
+                            </div>
+                            <div class="text-sm font-bold text-medical-600 bg-medical-50 border border-medical-100 rounded-lg p-3 text-center transition-all" style="display: none;"></div>
+                        </div>
+                        
                         
                         <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-6 group-hover:border-medical-100 transition-colors duration-300">
                             <div class="flex items-center space-x-2 text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
@@ -363,6 +427,14 @@
                         <h3 class="text-xl lg:text-2xl font-display font-bold text-slate-900 mb-4 leading-snug group-hover:text-medical-700 transition-colors duration-300">Care+ Vascular Protection Retractor</h3>
                         
                         <p class="text-base text-slate-600 font-light leading-relaxed mb-8 flex-grow">Protects the vascular structures during the cutting phase with dedicated surgical retractors.</p>
+                        <div class="flex flex-col space-y-3 mb-6 relative z-10">
+                            <div class="flex space-x-3">
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Left</button>
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Right</button>
+                            </div>
+                            <div class="text-sm font-bold text-medical-600 bg-medical-50 border border-medical-100 rounded-lg p-3 text-center transition-all" style="display: none;"></div>
+                        </div>
+                        
                         
                         <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-6 group-hover:border-medical-100 transition-colors duration-300">
                             <div class="flex items-center space-x-2 text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
@@ -389,6 +461,14 @@
                         <h3 class="text-xl lg:text-2xl font-display font-bold text-slate-900 mb-4 leading-snug group-hover:text-medical-700 transition-colors duration-300">Initial K Hinge Screw System</h3>
                         
                         <p class="text-base text-slate-600 font-light leading-relaxed mb-8 flex-grow">A 4.5 mm cannulated headless compressive screw to reinforce the bone hinge during osteotomy.</p>
+                        <div class="flex flex-col space-y-3 mb-6 relative z-10">
+                            <div class="flex space-x-3">
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Left</button>
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Right</button>
+                            </div>
+                            <div class="text-sm font-bold text-medical-600 bg-medical-50 border border-medical-100 rounded-lg p-3 text-center transition-all" style="display: none;"></div>
+                        </div>
+                        
                         
                         <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-6 group-hover:border-medical-100 transition-colors duration-300">
                             <div class="flex items-center space-x-2 text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
@@ -415,6 +495,14 @@
                         <h3 class="text-xl lg:text-2xl font-display font-bold text-slate-900 mb-4 leading-snug group-hover:text-medical-700 transition-colors duration-300">Activmotion S Osteotomy Plate System</h3>
                         
                         <p class="text-base text-slate-600 font-light leading-relaxed mb-8 flex-grow">Anatomically contoured plate designed for secure fixation and optimal stability in osteotomy procedures.</p>
+                        <div class="flex flex-col space-y-3 mb-6 relative z-10">
+                            <div class="flex space-x-3">
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Left</button>
+                                <button type="button" onclick="this.parentElement.nextElementSibling.innerText = '(N/A)'; this.parentElement.nextElementSibling.style.display = 'block';" class="flex-1 bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-medical-300 hover:text-medical-700 transition-all font-semibold py-2 px-4 rounded-lg shadow-sm text-sm">Right</button>
+                            </div>
+                            <div class="text-sm font-bold text-medical-600 bg-medical-50 border border-medical-100 rounded-lg p-3 text-center transition-all" style="display: none;"></div>
+                        </div>
+                        
                         
                         <div class="mt-auto flex items-center justify-between border-t border-slate-100 pt-6 group-hover:border-medical-100 transition-colors duration-300">
                             <div class="flex items-center space-x-2 text-slate-400 text-[11px] font-semibold uppercase tracking-wider">
@@ -502,7 +590,7 @@
                         <li><a href="#" class="text-slate-400 hover:text-white transition-colors">Supply Chain</a></li>
                         <li><a href="#" class="text-slate-400 hover:text-white transition-colors">Business Development</a></li>
                         <li><a href="#" class="text-slate-400 hover:text-white transition-colors">Careers</a></li>
-                        <li><a href="index.html#contact" class="text-slate-400 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="booking.html" class="text-slate-400 hover:text-white transition-colors">Book Your Appointment</a></li>
                     </ul>
                 </div>
 

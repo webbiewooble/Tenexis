@@ -16,7 +16,6 @@ export default defineConfig({
         products3: resolve(__dirname, 'products-3.html'),
         products4: resolve(__dirname, 'products-4.html'),
         products5: resolve(__dirname, 'products-5.html'),
-        products6: resolve(__dirname, 'products-6.html'),
       },
     },
   },
